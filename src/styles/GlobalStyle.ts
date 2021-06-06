@@ -9,6 +9,7 @@ const GlobalStyle = createGlobalStyle`
 --white:#FFFFFF;
 --light-grey:#F1F3F5;
 --max-width: 1111px;
+--transition: all .3s ease;
  }
 *, 
 ::after, 
@@ -37,7 +38,7 @@ letter-spacing: 5px;
 }
 p{
 font-size:1rem;
-line-height: 1.625px;
+line-height: 1.625rem;
 }
 ul{
   list-style: none;
@@ -48,7 +49,7 @@ a{
 img{
   max-width: 100%;
 }
-@media screen and (min-width:800px){
+@media screen and (min-width:700px){
   h1{
 font-size: 3rem;
 }
@@ -64,13 +65,13 @@ global classes
 ===========*/
 .section-center{
   margin: 0 auto;
-  width: 95vw;
+  width: 90vw;
   max-width: var(--max-width);
 }
 
-@media screen and (min-width:800){
+@media screen and (min-width:700px){
   .section-center{
-    width:90vw;
+    width:95vw;
   }
 }
  `

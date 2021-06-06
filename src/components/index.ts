@@ -1,3 +1,3 @@
 import Layout from "./Layout"
-
-export { Layout }
+import Contact from "./Contact"
+export { Layout, Contact }
