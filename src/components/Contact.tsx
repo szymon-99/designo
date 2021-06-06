@@ -19,7 +19,9 @@ const Contact: FC = () => {
           our expertise can help your business grow.
         </p>
       </div>
-      <Button color="light">get in touch</Button>
+      <Button to="/contact" color="light">
+        get in touch
+      </Button>
     </Wrapper>
   )
 }
@@ -39,7 +41,7 @@ const Wrapper = styled.section`
   p {
     margin-top: 1.5rem;
   }
-  button {
+  a {
     margin-top: 2rem;
     display: inline-block;
   }
@@ -67,7 +69,7 @@ const Wrapper = styled.section`
     .text {
       max-width: 450px;
     }
-    button {
+    a {
       margin: 0;
     }
     .bg-img {

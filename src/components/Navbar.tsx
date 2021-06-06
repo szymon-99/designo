@@ -9,6 +9,7 @@ import Sidebar from "./Sidebar"
 
 const Navbar: FC = () => {
   const [isOpen, setIsOpen] = useState(false)
+
   useEffect(() => {
     window.addEventListener("resize", () => {
       if (window.innerWidth >= 700) setIsOpen(false)

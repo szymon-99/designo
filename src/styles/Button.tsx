@@ -1,9 +1,11 @@
 import styled from "styled-components"
+import { Link } from "gatsby"
+
 interface ButtonProps {
   color?: "light"
 }
 
-export const Button = styled.button<ButtonProps>`
+export const Button = styled(Link)<ButtonProps>`
   padding: 1.125rem 1.5rem;
   border-radius: 8px;
   font-weight: 500;
