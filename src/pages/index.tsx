@@ -1,16 +1,17 @@
 import React, { FC } from "react"
 import { Link, graphql, PageProps } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
-import { Contact, HomeHero, Services } from "../components"
+import { Contact, HomeHero, Services, About } from "../components"
 
 export type HomeData = {
   data: {
-    desc: string
     name: string
     image: {
       localFiles: any[]
     }
+    huge: boolean
   }
+  id: string
 }
 
 export type ServicesQueryProps = {
@@ -27,6 +28,7 @@ const HomePage: FC<HomePageProps> = ({ data }) => {
     <>
       <HomeHero />
       <Services services={services} />
+      <About />
       <Contact />
     </>
   )
@@ -37,16 +39,17 @@ export const query = graphql`
     allAirtable(filter: { table: { eq: "pages" } }) {
       nodes {
         data {
-          desc
+          huge
           name
           image {
             localFiles {
               childImageSharp {
-                gatsbyImageData(placeholder: BLURRED)
+                gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
               }
             }
           }
         }
+        id
       }
     }
   }

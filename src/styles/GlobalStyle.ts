@@ -76,6 +76,9 @@ global classes
   width: 90vw;
   max-width: var(--max-width);
 }
+.section{
+  margin-top: 7rem;
+}
 
 
 @media screen and (min-width:700px){
@@ -85,7 +88,9 @@ global classes
 
 }
 @media screen and (min-width:1100px){
-  
+  .section{
+    margin-top: 10rem;
+  }
 }
  `
 

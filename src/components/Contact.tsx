@@ -5,7 +5,7 @@ import { StaticImage } from "gatsby-plugin-image"
 
 const Contact: FC = () => {
   return (
-    <Wrapper className="section-center">
+    <Wrapper className="section-center section">
       <StaticImage
         src="../assets/svgs/backgrounds/bg-pattern-call-to-action.svg"
         className="bg-img"
