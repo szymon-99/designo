@@ -1,14 +1,55 @@
-import React from "react"
-import { Link } from "gatsby"
+import React, { FC } from "react"
+import { Link, graphql, PageProps } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
-import { Contact } from "../components"
+import { Contact, HomeHero, Services } from "../components"
 
-const HomePage = () => (
-  <>
-    <h1>Essa</h1>
-    <h2>Essa</h2>
-    <Contact />
-  </>
-)
+export type HomeData = {
+  data: {
+    desc: string
+    name: string
+    image: {
+      localFiles: any[]
+    }
+  }
+}
+
+export type ServicesQueryProps = {
+  allAirtable: {
+    nodes: HomeData[]
+  }
+}
+export type HomePageProps = PageProps<ServicesQueryProps>
+
+const HomePage: FC<HomePageProps> = ({ data }) => {
+  const services = data.allAirtable.nodes
+
+  return (
+    <>
+      <HomeHero />
+      <Services services={services} />
+      <Contact />
+    </>
+  )
+}
+
+export const query = graphql`
+  {
+    allAirtable(filter: { table: { eq: "pages" } }) {
+      nodes {
+        data {
+          desc
+          name
+          image {
+            localFiles {
+              childImageSharp {
+                gatsbyImageData(placeholder: BLURRED)
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`
 
 export default HomePage

@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -18,7 +22,7 @@ module.exports = {
           google: [
             {
               family: "Jost",
-              variants: ["400", "500"],
+              variants: ["300, 400", "500"],
             },
           ],
         },
@@ -30,6 +34,28 @@ module.exports = {
         rule: {
           include: /assets\/svgs/,
         },
+      },
+    },
+    {
+      resolve: `gatsby-source-airtable`,
+      options: {
+        apiKey: process.env.GATSBY_AIRTABLE_KEY,
+        tables: [
+          {
+            baseId: process.env.GATSBY_AIRTABLE_BASE_ID,
+            tableName: `pages`,
+            mapping: {
+              image: `fileNode`,
+            },
+          },
+          {
+            baseId: process.env.GATSBY_AIRTABLE_BASE_ID,
+            tableName: `web design`,
+            mapping: {
+              image: `fileNode`,
+            },
+          },
+        ],
       },
     },
   ],

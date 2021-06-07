@@ -15,6 +15,7 @@ const Navbar: FC = () => {
       if (window.innerWidth >= 700) setIsOpen(false)
     })
   }, [])
+
   return (
     <Wrapper>
       <div className="nav-header">
@@ -29,7 +30,7 @@ const Navbar: FC = () => {
             height={27}
           />
         </Link>
-
+        <ul></ul>
         <div className="nav-toggle" onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? <Close /> : <Burger />}
         </div>
@@ -77,6 +78,9 @@ const Wrapper = styled.nav`
       }
       li:last-of-type {
         margin-right: 0;
+      }
+      li:hover {
+        border-bottom: 1px solid var(--dark-grey);
       }
       a {
         text-transform: uppercase;

@@ -10,6 +10,7 @@ const GlobalStyle = createGlobalStyle`
 --light-grey:#F1F3F5;
 --max-width: 1111px;
 --transition: all .3s ease;
+--radius: 15px;
  }
 *, 
 ::after, 
@@ -18,7 +19,6 @@ const GlobalStyle = createGlobalStyle`
   margin: 0;
   padding: 0;
 }
-
 body{
   font-family: 'Jost', sans-serif;
 }
@@ -40,6 +40,13 @@ p{
 font-size:1rem;
 line-height: 1.625rem;
 }
+h1,
+h2,
+h3,
+h4,
+p{
+  font-weight: 400;
+}
 ul{
   list-style: none;
 }
@@ -52,6 +59,7 @@ img{
 @media screen and (min-width:700px){
   h1{
 font-size: 3rem;
+line-height: 3rem;
 }
 h2{
 font-size:2.5rem;
@@ -69,10 +77,15 @@ global classes
   max-width: var(--max-width);
 }
 
+
 @media screen and (min-width:700px){
   .section-center{
     width:95vw;
   }
+
+}
+@media screen and (min-width:1100px){
+  
 }
  `
 

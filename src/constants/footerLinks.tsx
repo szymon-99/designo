@@ -1,10 +1,16 @@
 import React from "react"
-import Facebook from "../assets/svgs/icons/icon-facebook.svg"
-import Instagram from "../assets/svgs/icons/icon-instagram.svg"
-import Pinterest from "../assets/svgs/icons/icon-pinterest.svg"
-import Twitter from "../assets/svgs/icons/icon-twitter.svg"
-import Youtube from "../assets/svgs/icons/icon-youtube.svg"
-
+// import Facebook from "../assets/svgs/icons/icon-facebook.svg"
+// import Instagram from "../assets/svgs/icons/icon-instagram.svg"
+// import Pinterest from "../assets/svgs/icons/icon-pinterest.svg"
+// import Twitter from "../assets/svgs/icons/icon-twitter.svg"
+// import Youtube from "../assets/svgs/icons/icon-youtube.svg"
+import {
+  FaFacebook,
+  FaInstagram,
+  FaPinterest,
+  FaTwitter,
+  FaYoutube,
+} from "react-icons/fa"
 interface icon {
   id: number
   icon: any
@@ -13,27 +19,27 @@ interface icon {
 export const links: icon[] = [
   {
     id: 1,
-    icon: <Facebook />,
+    icon: <FaFacebook />,
     url: "www.facebook.com",
   },
   {
     id: 2,
-    icon: <Instagram />,
+    icon: <FaInstagram />,
     url: "www.instagram.com",
   },
   {
     id: 3,
-    icon: <Pinterest />,
+    icon: <FaPinterest />,
     url: "www.pinterest.com",
   },
   {
     id: 4,
-    icon: <Twitter />,
+    icon: <FaTwitter />,
     url: "www.twitter.com",
   },
   {
     id: 5,
-    icon: <Youtube />,
+    icon: <FaYoutube />,
     url: "www.youtube.com",
   },
 ]

@@ -46,7 +46,7 @@ const Footer = () => {
               const { id, icon, url } = link
 
               return (
-                <a href={url} key={id}>
+                <a href={url} key={id} className="social-link">
                   {icon}
                 </a>
               )
@@ -78,6 +78,14 @@ const Wrapper = styled.footer`
     a:not(:last-of-type) {
       margin-right: 1rem;
     }
+  }
+  .social-link {
+    font-size: 1.5rem;
+    color: var(--peach);
+    transition: var(--transition);
+  }
+  .social-link:hover {
+    color: var(--light-peach);
   }
 
   @media screen and (min-width: 700px) {
@@ -121,11 +129,15 @@ const NavWrapper = styled.nav`
       letter-spacing: 2px;
       color: var(--white);
     }
+
+    li:hover {
+      border-bottom: 1px solid var(--dark-grey);
+    }
   }
 
   @media screen and (min-width: 700px) {
     padding: 40px 0;
-    border-bottom: 1px solid #ffffff19;
+    border-bottom: 1px solid var(--dark-grey);
     display: flex;
     justify-content: space-between;
     align-items: center;

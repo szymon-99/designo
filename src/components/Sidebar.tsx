@@ -3,7 +3,27 @@ import { navLinks } from "../constants/navLinks"
 import { Link } from "gatsby"
 import styled from "styled-components"
 
+// interface SidebarProps {
+//   callback: React.Dispatch<React.SetStateAction<boolean>>
+// }
+
 const Sidebar: FC = () => {
+  // const listRef = useRef<HTMLUListElement>(null)
+
+  // console.log(listRef.current)
+  // const handleClick = (e: any) => {
+  //   if (listRef.current && listRef.current.contains(e.target)) {
+
+  //   } else {
+  //     callback(false)
+  //   }
+  // }
+
+  // useEffect(() => {
+  //   document.addEventListener("click", handleClick)
+  //   return () => document.removeEventListener("click", handleClick)
+  // }, [listRef])
+
   return (
     <Wrapper>
       {navLinks.map(link => {
@@ -26,6 +46,7 @@ const Wrapper = styled.ul`
   background: var(--black);
   transform: translateY(100%);
   padding: 3rem 1.5rem;
+  z-index: 10;
   a {
     text-transform: uppercase;
     font-size: 1.5rem;

@@ -31,7 +31,7 @@ const Wrapper = styled.section`
   background-color: var(--peach);
   color: var(--white);
   text-align: center;
-  border-radius: 15px;
+  border-radius: var(--radius);
   position: relative;
   overflow: hidden;
   z-index: 1;
