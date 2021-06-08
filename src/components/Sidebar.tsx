@@ -25,13 +25,13 @@ const Sidebar: FC<SidebarProps> = ({ callback }) => {
 }
 
 const Wrapper = styled.ul`
+  padding: 1.5rem 0;
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
   background: var(--black);
   transform: translateY(100%);
-  padding: 3rem 1.5rem;
   z-index: 10;
   a {
     text-transform: uppercase;
@@ -41,8 +41,13 @@ const Wrapper = styled.ul`
     letter-spacing: 2px;
     color: var(--white);
   }
-  li:not(:last-of-type) {
-    margin-bottom: 2rem;
+
+  li {
+    transition: var(--transition);
+    padding: 1.5rem;
+  }
+  li:hover {
+    background-color: var(--dark-grey);
   }
 `
 

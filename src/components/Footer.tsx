@@ -101,7 +101,7 @@ const Wrapper = styled.footer`
       justify-content: flex-end;
     }
   }
-  @media screen and (min-width: 1100px) {
+  @media screen and (min-width: 992px) {
     padding-top: 9rem;
   }
 `
@@ -129,8 +129,10 @@ const NavWrapper = styled.nav`
       letter-spacing: 2px;
       color: var(--white);
     }
-
-    li:hover {
+    a {
+      border-bottom: 1px solid transparent;
+    }
+    a:hover {
       border-bottom: 1px solid var(--dark-grey);
     }
   }

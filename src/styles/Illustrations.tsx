@@ -44,7 +44,7 @@ export const Illustrations = styled.section`
     }
   }
 
-  @media screen and (min-width: 1100px) {
+  @media screen and (min-width: 992px) {
     grid-column-gap: 2rem;
     grid-template-columns: repeat(3, 1fr);
     article {

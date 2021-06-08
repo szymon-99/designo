@@ -20,7 +20,7 @@ export const Button = styled(Link)<ButtonProps>`
   text-transform: uppercase;
   z-index: 10;
   color: ${props => (props.color ? "var(--dark-grey)" : "var(--white)")};
-  background: ${props => (props.color ? "var(--white)" : "(var--peach)")};
+  background: ${props => (props.color ? "var(--white)" : "var(--peach)")};
   :hover {
     color: var(--white);
     background: var(--light-peach);

@@ -34,7 +34,7 @@ const HeroWrapper = styled(Wrapper)`
   background-color: var(--peach);
   color: var(--white);
   margin-top: 0;
-  @media screen and (min-width: 1100px) {
+  @media screen and (min-width: 992px) {
     grid-template-columns: 1fr 470px;
     grid-template-rows: 480px;
     .img {

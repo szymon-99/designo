@@ -96,7 +96,7 @@ global classes
     }
 }
 
-@media screen and (min-width:1100px){
+@media screen and (min-width:992px){
   .section{
     margin-top: 10rem;
   }

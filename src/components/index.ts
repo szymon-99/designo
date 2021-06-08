@@ -6,6 +6,7 @@ import Friends from "./Friends"
 import AboutHero from "./AboutHero"
 import AboutInfo from "./AboutInfo"
 import Locations from "./Locations"
+import AboutInfoSecondary from "./AboutInfoSecondary"
 export {
   Layout,
   Contact,
@@ -15,4 +16,5 @@ export {
   AboutHero,
   AboutInfo,
   Locations,
+  AboutInfoSecondary,
 }

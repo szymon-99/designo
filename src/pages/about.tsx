@@ -1,6 +1,12 @@
 import React, { FC } from "react"
 import { graphql } from "gatsby"
-import { Contact, AboutHero, AboutInfo, Locations } from "../components"
+import {
+  Contact,
+  AboutHero,
+  AboutInfo,
+  Locations,
+  AboutInfoSecondary,
+} from "../components"
 
 const About: FC = () => {
   return (
@@ -8,6 +14,7 @@ const About: FC = () => {
       <AboutHero />
       <AboutInfo />
       <Locations />
+      <AboutInfoSecondary />
       <Contact />
     </main>
   )

@@ -64,7 +64,7 @@ const Wrapper = styled.section`
       max-width: 400px;
     }
   }
-  @media screen and (min-width: 1100px) {
+  @media screen and (min-width: 992px) {
     margin-top: 5rem;
     padding: 4.5rem 5.9rem;
     display: flex;

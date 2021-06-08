@@ -21,7 +21,7 @@ const Wrapper = styled.section`
     max-width: 1111px;
     grid-template-rows: 320px auto;
   }
-  @media screen and (min-width: 1100px) {
+  @media screen and (min-width: 992px) {
     margin-top: 10rem;
     grid-template-columns: 470px 1fr;
     grid-template-rows: 640px;

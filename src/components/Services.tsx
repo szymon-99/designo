@@ -98,7 +98,7 @@ const Wrapper = styled.section`
     grid-auto-rows: 200px;
   }
 
-  @media screen and (min-width: 1100px) {
+  @media screen and (min-width: 992px) {
     grid-template-columns: 1fr 1fr;
     grid-auto-rows: auto;
     column-gap: 2rem;

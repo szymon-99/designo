@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import { Illustrations } from "../styles/Illustrations"
+import Article from "./Article"
 
 export const query = graphql`
   {
@@ -25,11 +26,11 @@ type URL = {
   publicURL: string
 }
 
-type article = {
+export type article = {
   id: string
   data: {
     name: string
-    desc: string
+    desc?: string
     image: {
       localFiles: URL[]
     }
@@ -50,26 +51,7 @@ const About = () => {
   return (
     <Illustrations className="section-center section">
       {articles.map(item => {
-        const {
-          id,
-          data: { name, image, desc },
-        } = item
-        const {
-          localFiles: [data],
-        } = image
-
-        return (
-          <article key={id}>
-            <div className="img">
-              <img src={data.publicURL} alt={name} />
-              <div className="bg"></div>
-            </div>
-            <div>
-              <h3>{name}</h3>
-              <p>{desc}</p>
-            </div>
-          </article>
-        )
+        return <Article key={item.id} data={{ ...item }} description />
       })}
     </Illustrations>
   )
