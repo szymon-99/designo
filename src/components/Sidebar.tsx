@@ -3,34 +3,20 @@ import { navLinks } from "../constants/navLinks"
 import { Link } from "gatsby"
 import styled from "styled-components"
 
-// interface SidebarProps {
-//   callback: React.Dispatch<React.SetStateAction<boolean>>
-// }
+interface SidebarProps {
+  callback: React.Dispatch<React.SetStateAction<boolean>>
+}
 
-const Sidebar: FC = () => {
-  // const listRef = useRef<HTMLUListElement>(null)
-
-  // console.log(listRef.current)
-  // const handleClick = (e: any) => {
-  //   if (listRef.current && listRef.current.contains(e.target)) {
-
-  //   } else {
-  //     callback(false)
-  //   }
-  // }
-
-  // useEffect(() => {
-  //   document.addEventListener("click", handleClick)
-  //   return () => document.removeEventListener("click", handleClick)
-  // }, [listRef])
-
+const Sidebar: FC<SidebarProps> = ({ callback }) => {
   return (
     <Wrapper>
       {navLinks.map(link => {
         const { label, url, id } = link
         return (
           <li key={id}>
-            <Link to={url}>{label}</Link>
+            <Link to={url} onClick={() => callback(false)}>
+              {label}
+            </Link>
           </li>
         )
       })}

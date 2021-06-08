@@ -23,8 +23,6 @@ const HomeHero = () => {
         placeholder="blurred"
         className="img"
         layout="constrained"
-        // width={275}
-        // height={575}
       />
       <StaticImage
         src="../assets/svgs/backgrounds/bg-pattern-hero-home.svg"

@@ -7,9 +7,10 @@ import { RiArrowRightSLine } from "react-icons/ri"
 
 interface ServicesProps {
   services: HomeData[]
+  homePage?: boolean
 }
 
-const Services: FC<ServicesProps> = ({ services }) => {
+const Services: FC<ServicesProps> = ({ services, homePage }) => {
   return (
     <Wrapper className="section-center section">
       {services.map(item => {
@@ -18,7 +19,7 @@ const Services: FC<ServicesProps> = ({ services }) => {
         const image = data.image.localFiles[0].childImageSharp.gatsbyImageData
 
         return (
-          <article key={id} className={huge ? "huge" : undefined}>
+          <article key={id} className={homePage && huge ? "huge" : undefined}>
             <div className="bg"></div>
             <GatsbyImage image={image} alt={name} className="img" />
             <div className="info">

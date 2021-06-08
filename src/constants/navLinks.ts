@@ -7,7 +7,7 @@ interface navLink {
 export const navLinks: navLink[] = [
   {
     label: "our company",
-    url: "/company",
+    url: "/about",
     id: 1,
   },
   {

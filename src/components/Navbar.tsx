@@ -36,7 +36,7 @@ const Navbar: FC = () => {
         </div>
       </div>
       <NavLinks />
-      {isOpen && <Sidebar />}
+      {isOpen && <Sidebar callback={setIsOpen} />}
     </Wrapper>
   )
 }

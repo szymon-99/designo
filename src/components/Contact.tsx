@@ -5,14 +5,14 @@ import { StaticImage } from "gatsby-plugin-image"
 
 const Contact: FC = () => {
   return (
-    <Wrapper className="section-center section">
+    <Wrapper className="section-center">
       <StaticImage
         src="../assets/svgs/backgrounds/bg-pattern-call-to-action.svg"
         className="bg-img"
         alt="background"
         placeholder="blurred"
       />
-      <div className="text">
+      <div className="info">
         <h1>Let’s talk about your project</h1>
         <p>
           Ready to take it to the next level? Contact us today and find out how
@@ -35,8 +35,9 @@ const Wrapper = styled.section`
   position: relative;
   overflow: hidden;
   z-index: 1;
-  font-weight: 400;
   transform: translateY(50%);
+  display: grid;
+  place-items: center;
 
   p {
     margin-top: 1.5rem;
@@ -57,16 +58,20 @@ const Wrapper = styled.section`
   @media screen and (min-width: 700px) {
     transform: translateY(25%);
     .bg-img {
-      transform: scale(1.5);
+      transform: scale(1.2);
+    }
+    .info {
+      max-width: 400px;
     }
   }
   @media screen and (min-width: 1100px) {
+    margin-top: 5rem;
     padding: 4.5rem 5.9rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     text-align: start;
-    .text {
+    .info {
       max-width: 450px;
     }
     a {

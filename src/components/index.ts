@@ -2,5 +2,17 @@ import Layout from "./Layout"
 import Contact from "./Contact"
 import HomeHero from "./HomeHero"
 import Services from "./Services"
-import About from "./About"
-export { Layout, Contact, HomeHero, Services, About }
+import Friends from "./Friends"
+import AboutHero from "./AboutHero"
+import AboutInfo from "./AboutInfo"
+import Locations from "./Locations"
+export {
+  Layout,
+  Contact,
+  HomeHero,
+  Services,
+  Friends,
+  AboutHero,
+  AboutInfo,
+  Locations,
+}

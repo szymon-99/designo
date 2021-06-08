@@ -8,6 +8,7 @@ const GlobalStyle = createGlobalStyle`
 --dark-grey: #333136;
 --white:#FFFFFF;
 --light-grey:#F1F3F5;
+--light-pink:#FDF3F0;
 --max-width: 1111px;
 --transition: all .3s ease;
 --radius: 15px;
@@ -79,18 +80,31 @@ global classes
 .section{
   margin-top: 7rem;
 }
-
+.text{
+    padding: 5rem 0;
+    max-width: 90vw;
+    margin: 0 auto;
+    text-align: center;
+    h1 {
+      margin-bottom: 1.5rem;
+    }
+}
 
 @media screen and (min-width:700px){
-  .section-center{
-    width:95vw;
-  }
-
+  .text {
+      padding: 4rem 3.5rem;
+    }
 }
+
 @media screen and (min-width:1100px){
   .section{
     margin-top: 10rem;
   }
+  
+    .text {
+      text-align: left;
+      padding: 0 5rem;
+    }
 }
  `
 

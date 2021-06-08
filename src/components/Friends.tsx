@@ -1,14 +1,15 @@
 import React from "react"
-import styled from "styled-components"
 import { graphql, useStaticQuery } from "gatsby"
+import { Illustrations } from "../styles/Illustrations"
 
 export const query = graphql`
   {
-    allAirtable(filter: { table: { eq: "homeInfo" } }) {
+    allAirtable(filter: { table: { eq: "homeData" } }) {
       nodes {
         id
         data {
           name
+          desc
           image {
             localFiles {
               publicURL
@@ -19,6 +20,7 @@ export const query = graphql`
     }
   }
 `
+
 type URL = {
   publicURL: string
 }
@@ -27,13 +29,14 @@ type article = {
   id: string
   data: {
     name: string
+    desc: string
     image: {
       localFiles: URL[]
     }
   }
 }
 
-interface QueryInterface {
+export interface QueryInterface {
   allAirtable: {
     nodes: article[]
   }
@@ -45,11 +48,11 @@ const About = () => {
   } = useStaticQuery<QueryInterface>(query)
 
   return (
-    <Wrapper className="section-center section">
+    <Illustrations className="section-center section">
       {articles.map(item => {
         const {
           id,
-          data: { name, image },
+          data: { name, image, desc },
         } = item
         const {
           localFiles: [data],
@@ -57,16 +60,19 @@ const About = () => {
 
         return (
           <article key={id}>
-            <img src={data.publicURL} alt={name} />
+            <div className="img">
+              <img src={data.publicURL} alt={name} />
+              <div className="bg"></div>
+            </div>
+            <div>
+              <h3>{name}</h3>
+              <p>{desc}</p>
+            </div>
           </article>
         )
       })}
-    </Wrapper>
+    </Illustrations>
   )
 }
-
-const Wrapper = styled.section`
-  display: grid;
-`
 
 export default About

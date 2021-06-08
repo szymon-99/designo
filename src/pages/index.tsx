@@ -1,7 +1,6 @@
 import React, { FC } from "react"
-import { Link, graphql, PageProps } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
-import { Contact, HomeHero, Services, About } from "../components"
+import { graphql, PageProps } from "gatsby"
+import { Contact, HomeHero, Services, Friends } from "../components"
 
 export type HomeData = {
   data: {
@@ -25,12 +24,12 @@ const HomePage: FC<HomePageProps> = ({ data }) => {
   const services = data.allAirtable.nodes
 
   return (
-    <>
+    <main>
       <HomeHero />
-      <Services services={services} />
-      <About />
+      <Services services={services} homePage />
+      <Friends />
       <Contact />
-    </>
+    </main>
   )
 }
 
