@@ -41,7 +41,7 @@ const Projects: FC<ProjectsProps> = ({
 
 export const query = graphql`
   query GetPageQuery($slug: String) {
-    allAirtable(filter: { table: { eq: "app-design" } }) {
+    allAirtable(filter: { table: { eq: $slug } }) {
       nodes {
         data {
           name
