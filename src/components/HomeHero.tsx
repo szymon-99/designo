@@ -69,7 +69,7 @@ const Wrapper = styled.section`
   @media screen and (min-width: 700px) {
     border-radius: var(--radius);
     margin: 0 auto;
-    width: 95vw;
+    width: 90vw;
     max-width: var(--max-width);
     .info {
       padding: 4rem 4rem 0;

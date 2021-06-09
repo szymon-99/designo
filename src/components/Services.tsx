@@ -4,6 +4,7 @@ import { HomeData } from "../pages/index"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
 import { RiArrowRightSLine } from "react-icons/ri"
+import slugify from "slugify"
 
 interface ServicesProps {
   services: HomeData[]
@@ -17,6 +18,7 @@ const Services: FC<ServicesProps> = ({ services, homePage }) => {
         const { id, data } = item
         const { name, huge } = data
         const image = data.image.localFiles[0].childImageSharp.gatsbyImageData
+        const slug = slugify(name, { lower: true })
 
         return (
           <article key={id} className={homePage && huge ? "huge" : undefined}>
@@ -24,7 +26,7 @@ const Services: FC<ServicesProps> = ({ services, homePage }) => {
             <GatsbyImage image={image} alt={name} className="img" />
             <div className="info">
               <h2>{name}</h2>
-              <Link to={`/${name}`}>
+              <Link to={`/${slug}`}>
                 view projects{" "}
                 <span>
                   <RiArrowRightSLine />

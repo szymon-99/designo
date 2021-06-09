@@ -1,7 +1,28 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.com/docs/node-apis/
- */
+const path = require("path")
+const slugify = require("slugify")
 
-// You can delete this file if you're not using it
+exports.createPages = async ({ graphql, actions }) => {
+  const { createPage } = actions
+  const result = await graphql(`
+    query GetPageQuery {
+      allAirtable(filter: { table: { eq: "pages" } }) {
+        nodes {
+          data {
+            name
+          }
+        }
+      }
+    }
+  `)
+  console.log(result)
+  result.data.allAirtable.nodes.forEach(({ data: { name } }) => {
+    const slug = slugify(name, { lower: true })
+    createPage({
+      path: `/${slug}`,
+      component: path.resolve(`./src/templates/projects-template.tsx`),
+      context: {
+        name,
+      },
+    })
+  })
+}

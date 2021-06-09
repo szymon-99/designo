@@ -5,7 +5,6 @@ import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import { links } from "../constants/footerLinks"
 
-//need to make same nav like navbar because cant query
 const Footer = () => {
   return (
     <Wrapper>
