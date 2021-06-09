@@ -2,6 +2,7 @@ import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import { Illustrations } from "../styles/Illustrations"
 import Article from "./Article"
+import { SVGQuery } from "../../custom"
 
 export const query = graphql`
   {
@@ -21,32 +22,10 @@ export const query = graphql`
     }
   }
 `
-
-type URL = {
-  publicURL: string
-}
-
-export type article = {
-  id: string
-  data: {
-    name: string
-    desc?: string
-    image: {
-      localFiles: URL[]
-    }
-  }
-}
-
-export interface QueryInterface {
-  allAirtable: {
-    nodes: article[]
-  }
-}
-
 const About = () => {
   const {
     allAirtable: { nodes: articles },
-  } = useStaticQuery<QueryInterface>(query)
+  } = useStaticQuery<SVGQuery>(query)
 
   return (
     <Illustrations className="section-center section">

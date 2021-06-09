@@ -7,3 +7,50 @@ declare module "*.png" {
   const value: string
   export default value
 }
+
+export type image = {
+  childImageSharp: {
+    gatsbyImageData: IGatsbyImageData
+  }
+}
+export type service = {
+  data: {
+    name: string
+    image: {
+      localFiles: image[]
+    }
+    huge?: boolean
+  }
+  id: string
+}
+export type project = {
+  data: {
+    name: string
+    desc: string
+    image: {
+      localFiles: image[]
+    }
+  }
+  id: string
+}
+
+type URL = {
+  publicURL: string
+}
+
+type article = {
+  id: string
+  data: {
+    name: string
+    desc?: string
+    image: {
+      localFiles: URL[]
+    }
+  }
+}
+
+export interface SVGQuery {
+  allAirtable: {
+    nodes: article[]
+  }
+}

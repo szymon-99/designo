@@ -7,7 +7,6 @@ const AboutHero = () => {
   return (
     <HeroWrapper>
       <StaticImage
-        //need to handle image swapping
         src="../assets/images/about/hero.jpeg"
         alt="workers"
         layout="fullWidth"

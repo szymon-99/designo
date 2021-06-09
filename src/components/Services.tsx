@@ -1,13 +1,13 @@
 import React, { FC } from "react"
 import styled from "styled-components"
-import { HomeData } from "../pages/index"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
 import { RiArrowRightSLine } from "react-icons/ri"
 import slugify from "slugify"
+import { service } from "../../custom"
 
 interface ServicesProps {
-  services: HomeData[]
+  services: service[]
   homePage?: boolean
 }
 
@@ -102,7 +102,7 @@ const Wrapper = styled.section`
 
   @media screen and (min-width: 992px) {
     grid-template-columns: 1fr 1fr;
-    grid-auto-rows: auto;
+    grid-auto-rows: 300px;
     column-gap: 2rem;
     .huge {
       grid-row: 1 / 3;

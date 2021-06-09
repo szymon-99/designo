@@ -21,7 +21,7 @@ exports.createPages = async ({ graphql, actions }) => {
       path: `/${slug}`,
       component: path.resolve(`./src/templates/projects-template.tsx`),
       context: {
-        name,
+        slug,
       },
     })
   })

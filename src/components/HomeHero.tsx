@@ -81,9 +81,9 @@ const Wrapper = styled.section`
       left: 20%;
     }
   }
-  @media screen and (min-width: 992px) {
+  @media screen and (min-width: 1200px) {
     text-align: left;
-    grid-template-columns: 600px 1fr;
+    grid-template-columns: 1fr auto;
     grid-template-rows: 640px;
     .info {
       padding: 0 0 0 6rem;

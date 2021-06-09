@@ -1,21 +1,11 @@
 import React, { FC } from "react"
 import { graphql, PageProps } from "gatsby"
 import { Contact, HomeHero, Services, Friends } from "../components"
-
-export type HomeData = {
-  data: {
-    name: string
-    image: {
-      localFiles: any[]
-    }
-    huge: boolean
-  }
-  id: string
-}
+import { service } from "../../custom"
 
 export type ServicesQueryProps = {
   allAirtable: {
-    nodes: HomeData[]
+    nodes: service[]
   }
 }
 export type HomePageProps = PageProps<ServicesQueryProps>

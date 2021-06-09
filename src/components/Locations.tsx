@@ -1,7 +1,7 @@
 import React from "react"
 import { Illustrations } from "../styles/Illustrations"
 import styled from "styled-components"
-import { QueryInterface } from "./Friends"
+import { SVGQuery } from "../../custom"
 import { graphql, useStaticQuery } from "gatsby"
 import Article from "./Article"
 
@@ -26,7 +26,7 @@ const query = graphql`
 const Locations = () => {
   const {
     allAirtable: { nodes: articles },
-  } = useStaticQuery<QueryInterface>(query)
+  } = useStaticQuery<SVGQuery>(query)
 
   return (
     <Wrapper className="section section-center">

@@ -7,6 +7,7 @@ import AboutHero from "./AboutHero"
 import AboutInfo from "./AboutInfo"
 import Locations from "./Locations"
 import AboutInfoSecondary from "./AboutInfoSecondary"
+import Gallery from "./Gallery"
 export {
   Layout,
   Contact,
@@ -17,4 +18,5 @@ export {
   AboutInfo,
   Locations,
   AboutInfoSecondary,
+  Gallery,
 }
