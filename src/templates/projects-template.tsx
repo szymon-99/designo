@@ -29,7 +29,6 @@ interface ProjectsProps {
 const Projects: FC<ProjectsProps> = ({
   data: { services, allAirtable, airtable },
 }) => {
-  console.log(allAirtable)
   const { desc, name } = airtable.data
   return (
     <Wrapper>

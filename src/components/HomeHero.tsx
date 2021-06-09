@@ -22,7 +22,6 @@ const HomeHero = () => {
         alt="phone"
         placeholder="blurred"
         className="img"
-        layout="constrained"
       />
       <StaticImage
         src="../assets/svgs/backgrounds/bg-pattern-hero-home.svg"

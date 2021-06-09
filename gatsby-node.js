@@ -14,7 +14,7 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     }
   `)
-  console.log(result)
+
   result.data.allAirtable.nodes.forEach(({ data: { name } }) => {
     const slug = slugify(name, { lower: true })
     createPage({

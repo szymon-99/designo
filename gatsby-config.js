@@ -57,6 +57,21 @@ module.exports = {
           },
           {
             baseId: process.env.GATSBY_AIRTABLE_BASE_ID,
+            tableName: `graphic-design`,
+            mapping: {
+              image: `fileNode`,
+            },
+          },
+
+          {
+            baseId: process.env.GATSBY_AIRTABLE_BASE_ID,
+            tableName: `app-design`,
+            mapping: {
+              image: `fileNode`,
+            },
+          },
+          {
+            baseId: process.env.GATSBY_AIRTABLE_BASE_ID,
             tableName: `homeData`,
             mapping: {
               image: `fileNode`,

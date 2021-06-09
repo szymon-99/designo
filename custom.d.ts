@@ -1,3 +1,4 @@
+import { ImageDataLike } from "gatsby-plugin-image"
 declare module "*.svg" {
   const content: React.FunctionComponent<React.SVGAttributes<SVGElement>>
   // | string
@@ -8,16 +9,11 @@ declare module "*.png" {
   export default value
 }
 
-export type image = {
-  childImageSharp: {
-    gatsbyImageData: IGatsbyImageData
-  }
-}
 export type service = {
   data: {
     name: string
     image: {
-      localFiles: image[]
+      localFiles: ImageDataLike[]
     }
     huge?: boolean
   }
@@ -28,7 +24,7 @@ export type project = {
     name: string
     desc: string
     image: {
-      localFiles: image[]
+      localFiles: ImageDataLike[]
     }
   }
   id: string
