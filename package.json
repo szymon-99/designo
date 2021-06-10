@@ -7,6 +7,7 @@
   "dependencies": {
     "@types/styled-components": "^5.1.9",
     "dotenv": "^8.6.0",
+    "formik": "^2.2.9",
     "gatsby": "^3.6.2",
     "gatsby-plugin-gatsby-cloud": "^2.6.1",
     "gatsby-plugin-image": "^1.6.0",

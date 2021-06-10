@@ -50,3 +50,8 @@ export interface SVGQuery {
     nodes: article[]
   }
 }
+
+export type description = {
+  desc: string
+  name: string
+}

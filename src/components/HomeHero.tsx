@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { Button } from "../styles/Button"
 import { StaticImage } from "gatsby-plugin-image"
+import bg from "../assets/images/bg/home-hero.svg"
 
 const HomeHero = () => {
   return (
@@ -23,13 +24,6 @@ const HomeHero = () => {
         placeholder="blurred"
         className="img"
       />
-      <StaticImage
-        src="../assets/svgs/backgrounds/bg-pattern-hero-home.svg"
-        alt="background"
-        placeholder="blurred"
-        className="bg"
-        layout="fixed"
-      />
     </Wrapper>
   )
 }
@@ -41,10 +35,13 @@ const Wrapper = styled.section`
   overflow: hidden;
   display: grid;
   max-width: 100vw;
-  grid-template-rows: 1fr 420px;
+  grid-template-rows: 1fr 360px;
   position: relative;
   z-index: 1;
   place-items: center;
+  background-image: url(${bg});
+  background-repeat: no-repeat;
+  background-position: left;
 
   .info {
     padding: 5rem 2rem 0;
@@ -56,12 +53,6 @@ const Wrapper = styled.section`
   .img {
     pointer-events: none;
   }
-  .bg {
-    position: absolute;
-    top: 13%;
-    left: 0;
-    z-index: -1;
-  }
   .img {
     transform: translateY(15%);
   }
@@ -70,22 +61,22 @@ const Wrapper = styled.section`
     margin: 0 auto;
     width: 90vw;
     max-width: var(--max-width);
+    background-position: top 20% right -20%;
     .info {
       padding: 4rem 4rem 0;
     }
     p {
       padding: 0 2rem;
     }
-    .bg {
-      left: 20%;
-    }
   }
   @media screen and (min-width: 1200px) {
     text-align: left;
     grid-template-columns: 1fr auto;
     grid-template-rows: 640px;
+    background-position: right;
     .info {
       padding: 0 0 0 6rem;
+      min-width: 600px;
     }
     p {
       padding: initial;

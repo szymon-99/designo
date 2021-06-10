@@ -1,6 +1,6 @@
 import React, { FC } from "react"
 import { Button } from "../styles/Button"
-import { article } from "./Friends"
+import { article } from "../../custom"
 
 interface ArticleProps {
   data: article

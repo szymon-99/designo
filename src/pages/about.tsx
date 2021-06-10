@@ -20,16 +20,4 @@ const About: FC = () => {
   )
 }
 
-export const query = graphql`
-  {
-    allFile(filter: { relativeDirectory: { eq: "about" } }) {
-      nodes {
-        childImageSharp {
-          gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
-        }
-      }
-    }
-  }
-`
-
 export default About

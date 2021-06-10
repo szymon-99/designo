@@ -1,16 +1,9 @@
 import React, { FC } from "react"
 import styled from "styled-components"
 import { graphql } from "gatsby"
-import { Services, Contact, Gallery } from "../components"
+import { Services, Contact, Gallery, ProjectsHero } from "../components"
 
-import { service, project } from "../../custom"
-
-type description = {
-  data: {
-    desc: string
-    name: string
-  }
-}
+import { service, project, description } from "../../custom"
 
 type ProjectsQuery = {
   allAirtable: {
@@ -19,7 +12,9 @@ type ProjectsQuery = {
   services: {
     nodes: service[]
   }
-  airtable: description
+  airtable: {
+    data: description
+  }
 }
 
 interface ProjectsProps {
@@ -27,12 +22,13 @@ interface ProjectsProps {
 }
 
 const Projects: FC<ProjectsProps> = ({
-  data: { services, allAirtable, airtable },
+  data: { services, allAirtable: projects, airtable: description },
 }) => {
-  const { desc, name } = airtable.data
+  console.log(projects.nodes[0].data.image.localFiles[0])
   return (
     <Wrapper>
-      <Gallery description={desc} images={allAirtable.nodes} name={name} />
+      <ProjectsHero info={description.data} />
+      <Gallery images={projects.nodes} />
       <Services services={services.nodes} />
       <Contact />
     </Wrapper>

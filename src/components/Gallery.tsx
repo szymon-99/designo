@@ -2,32 +2,32 @@ import React, { FC } from "react"
 import styled from "styled-components"
 import { project } from "../../custom"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import GalleryImage from "./GalleryImage"
 
 interface GalleryProps {
-  name: string
-  description: string
   images: project[]
 }
 
-const Gallery: FC<GalleryProps> = ({ name, description, images }) => {
+const Gallery: FC<GalleryProps> = ({ images }) => {
   return (
-    <Wrapper>
-      <h1>{name}</h1>
-      <p>{description}</p>
+    <Wrapper className="section-center section">
       {images.map(item => {
         const image = item.data.image.localFiles[0]
-        return (
-          <GatsbyImage
-            key={item.id}
-            image={getImage(image)}
-            alt={item.data.name}
-          />
-        )
+        const { name, desc } = item.data
+
+        return <GalleryImage image={image} name={name} desc={desc} />
       })}
     </Wrapper>
   )
 }
 
-const Wrapper = styled.section``
+const Wrapper = styled.section`
+  display: grid;
+  grid-gap: 2rem;
+
+  @media screen and (min-width: 992px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+`
 
 export default Gallery

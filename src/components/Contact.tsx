@@ -2,16 +2,17 @@ import React, { FC } from "react"
 import styled from "styled-components"
 import { Button } from "../styles/Button"
 import { StaticImage } from "gatsby-plugin-image"
+import bg from "../assets/images/bg/contact.svg"
 
 const Contact: FC = () => {
   return (
     <Wrapper className="section-center">
-      <StaticImage
-        src="../assets/svgs/backgrounds/bg-pattern-call-to-action.svg"
+      {/* <StaticImage
+        src="../assets/images/bg/contact.svg"
         className="bg-img"
         alt="background"
         placeholder="blurred"
-      />
+      /> */}
       <div className="info">
         <h1>Let’s talk about your project</h1>
         <p>
@@ -38,7 +39,9 @@ const Wrapper = styled.section`
   transform: translateY(50%);
   display: grid;
   place-items: center;
-
+  background-image: url(${bg});
+  background-position: center right 60%;
+  background-repeat: no-repeat;
   p {
     margin-top: 1.5rem;
   }
@@ -46,20 +49,8 @@ const Wrapper = styled.section`
     margin-top: 2rem;
     display: inline-block;
   }
-  .bg-img {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    transform: scale(2.5);
-    z-index: -1;
-  }
   @media screen and (min-width: 700px) {
     transform: translateY(25%);
-    .bg-img {
-      transform: scale(1.2);
-    }
     .info {
       max-width: 400px;
     }
@@ -71,15 +62,12 @@ const Wrapper = styled.section`
     justify-content: space-between;
     align-items: center;
     text-align: start;
+    background-position: center right;
     .info {
       max-width: 450px;
     }
     a {
       margin: 0;
-    }
-    .bg-img {
-      transform: scale(1);
-      left: 20%;
     }
   }
 `
