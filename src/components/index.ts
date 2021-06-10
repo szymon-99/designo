@@ -11,6 +11,7 @@ import Gallery from "./Gallery"
 import ProjectsHero from "./ProjectsHero"
 import Navbar from "./Navbar"
 import Footer from "./Footer"
+import ContactHero from "./ContactHero"
 export {
   Layout,
   Contact,
@@ -25,4 +26,5 @@ export {
   ProjectsHero,
   Navbar,
   Footer,
+  ContactHero,
 }

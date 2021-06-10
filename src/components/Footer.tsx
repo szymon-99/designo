@@ -1,13 +1,20 @@
-import React from "react"
+import React, { FC } from "react"
 import styled from "styled-components"
 import NavLinks from "./NavLinks"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import { links } from "../constants/footerLinks"
 
-const Footer = () => {
+interface FooterProps {
+  contactPage?: boolean
+}
+
+const Footer: FC<FooterProps> = ({ contactPage }) => {
   return (
-    <Wrapper>
+    <Wrapper
+      style={contactPage ? { padding: "4rem 0" } : undefined}
+      className={contactPage ? "section" : undefined}
+    >
       <NavWrapper className="section-center">
         <div className="nav-header">
           <Link to="/">
