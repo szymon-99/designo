@@ -1,7 +1,6 @@
 import React, { FC } from "react"
-import styled from "styled-components"
 import { graphql } from "gatsby"
-import { Services, Contact, Gallery, ProjectsHero } from "../components"
+import { Services, Contact, Gallery, ProjectsHero, Layout } from "../components"
 
 import { service, project, description } from "../../custom"
 
@@ -26,12 +25,14 @@ const Projects: FC<ProjectsProps> = ({
 }) => {
   console.log(projects.nodes[0].data.image.localFiles[0])
   return (
-    <Wrapper>
-      <ProjectsHero info={description.data} />
-      <Gallery images={projects.nodes} />
-      <Services services={services.nodes} />
-      <Contact />
-    </Wrapper>
+    <Layout>
+      <main>
+        <ProjectsHero info={description.data} />
+        <Gallery images={projects.nodes} />
+        <Services services={services.nodes} />
+        <Contact />
+      </main>
+    </Layout>
   )
 }
 
@@ -78,7 +79,5 @@ export const query = graphql`
     }
   }
 `
-
-const Wrapper = styled.main``
 
 export default Projects

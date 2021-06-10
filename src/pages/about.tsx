@@ -6,17 +6,20 @@ import {
   AboutInfo,
   Locations,
   AboutInfoSecondary,
+  Layout,
 } from "../components"
 
 const About: FC = () => {
   return (
-    <main>
-      <AboutHero />
-      <AboutInfo />
-      <Locations />
-      <AboutInfoSecondary />
-      <Contact />
-    </main>
+    <Layout>
+      <main>
+        <AboutHero />
+        <AboutInfo />
+        <Locations />
+        <AboutInfoSecondary />
+        <Contact />
+      </main>
+    </Layout>
   )
 }
 

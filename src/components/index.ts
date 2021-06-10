@@ -9,6 +9,8 @@ import Locations from "./Locations"
 import AboutInfoSecondary from "./AboutInfoSecondary"
 import Gallery from "./Gallery"
 import ProjectsHero from "./ProjectsHero"
+import Navbar from "./Navbar"
+import Footer from "./Footer"
 export {
   Layout,
   Contact,
@@ -21,4 +23,6 @@ export {
   AboutInfoSecondary,
   Gallery,
   ProjectsHero,
+  Navbar,
+  Footer,
 }

@@ -1,6 +1,14 @@
 import React, { FC } from "react"
 import { graphql, PageProps } from "gatsby"
-import { Contact, HomeHero, Services, Friends } from "../components"
+import {
+  Contact,
+  HomeHero,
+  Services,
+  Friends,
+  Navbar,
+  Footer,
+  Layout,
+} from "../components"
 import { service } from "../../custom"
 
 export type ServicesQueryProps = {
@@ -14,12 +22,14 @@ const HomePage: FC<HomePageProps> = ({ data }) => {
   const services = data.allAirtable.nodes
 
   return (
-    <main>
-      <HomeHero />
-      <Services services={services} homePage />
-      <Friends />
-      <Contact />
-    </main>
+    <Layout>
+      <main>
+        <HomeHero />
+        <Services services={services} homePage />
+        <Friends />
+        <Contact />
+      </main>
+    </Layout>
   )
 }
 
