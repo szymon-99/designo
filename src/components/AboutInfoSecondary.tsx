@@ -9,7 +9,7 @@ const AboutInfoSecondary = () => {
   return (
     <InfoWrapper>
       <StaticImage
-        src="/assets/images/about/info2.jpeg"
+        src="../assets/images/about/info2.jpeg"
         alt="women looking at paintings"
         placeholder="blurred"
         className="img"
