@@ -5,9 +5,10 @@ import { article } from "../../custom"
 interface ArticleProps {
   data: article
   description?: boolean
+  locations?: boolean
 }
 
-const Article: FC<ArticleProps> = ({ description, data }) => {
+const Article: FC<ArticleProps> = ({ locations, description, data }) => {
   const {
     id,
     data: { name, image },
@@ -23,7 +24,9 @@ const Article: FC<ArticleProps> = ({ description, data }) => {
         {description ? (
           <p>{data.data.desc}</p>
         ) : (
-          <Button to={`/${name}`}>see loaction</Button>
+          <Button to={locations ? "/locations" : `/${name}`}>
+            see loaction
+          </Button>
         )}
       </div>
     </article>

@@ -28,7 +28,6 @@ const Wrapper = styled.section`
   color: var(--white);
   text-align: center;
   background-image: url(${twoCircles});
-
   background-repeat: no-repeat;
 
   .container {
