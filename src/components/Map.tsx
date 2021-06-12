@@ -1,16 +1,16 @@
 import React, { FC } from "react"
 import { map } from "../constants/locations"
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet"
-import L from "leaflet"
-import icon from "leaflet/dist/images/marker-icon.png"
-import iconShadow from "leaflet/dist/images/marker-shadow.png"
+// import L from "leaflet"
+// import icon from "leaflet/dist/images/marker-icon.png"
+// import iconShadow from "leaflet/dist/images/marker-shadow.png"
 
-const DefaultIcon = L.icon({
-  iconUrl: icon,
-  shadowUrl: iconShadow,
-})
+// const DefaultIcon = L.icon({
+//   iconUrl: icon,
+//   shadowUrl: iconShadow,
+// })
 
-L.Marker.prototype.options.icon = DefaultIcon
+// L.Marker.prototype.options.icon = DefaultIcon
 
 const Map: FC<map> = ({ cords }) => {
   return (
