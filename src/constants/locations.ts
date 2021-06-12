@@ -6,7 +6,7 @@ export type map = {
 
 export type mapInfo = {
   name: string
-  slug: string
+  shortcut: string
   adress: string[]
   number: string
   mail: string
@@ -28,7 +28,7 @@ export const data: location[] = [
     },
     mapInfo: {
       name: "canada",
-      slug: "Central",
+      shortcut: "Central",
       adress: ["3886 Wellington Street", "Toronto, Ontario M9C 3J5"],
       number: "+1 253-863-8967",
       mail: "contact@designo.co",
@@ -44,7 +44,7 @@ export const data: location[] = [
     },
     mapInfo: {
       name: "australia",
-      slug: "AU",
+      shortcut: "AU",
       adress: ["19 Balonne Street", "New South Wales 2443"],
       number: "(02) 6720 9092",
       mail: "contact@designo.au",
@@ -60,7 +60,7 @@ export const data: location[] = [
     },
     mapInfo: {
       name: "united kingdom",
-      slug: "UK",
+      shortcut: "UK",
       adress: ["13  Colorado Way", "Rhyd-y-fro SA8 9GA"],
       number: "078 3115 1400",
       mail: "contact@designo.uk",

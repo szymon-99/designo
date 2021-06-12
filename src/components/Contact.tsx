@@ -1,18 +1,11 @@
 import React, { FC } from "react"
 import styled from "styled-components"
 import { Button } from "../styles/Button"
-import { StaticImage } from "gatsby-plugin-image"
 import bg from "../assets/images/bg/contact.svg"
 
 const Contact: FC = () => {
   return (
     <Wrapper className="section-center">
-      {/* <StaticImage
-        src="../assets/images/bg/contact.svg"
-        className="bg-img"
-        alt="background"
-        placeholder="blurred"
-      /> */}
       <div className="info">
         <h1>Let’s talk about your project</h1>
         <p>

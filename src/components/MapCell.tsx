@@ -1,7 +1,9 @@
 import React, { FC } from "react"
+import slugify from "slugify"
 import styled from "styled-components"
 import { location } from "../constants/locations"
 import Map from "./Map"
+import Bg from "../assets/images/bg/two-circles-light.svg"
 
 interface MapProps {
   location: location
@@ -10,16 +12,18 @@ interface MapProps {
 
 const MapCell: FC<MapProps> = ({ location: { map, mapInfo }, reverse }) => {
   const { cords } = map
-  const { name, slug, number, mail, adress } = mapInfo
+  const { name, shortcut, number, mail, adress } = mapInfo
+  const slug = slugify(name)
+  console.log(slug)
   return (
-    <Wrapper id={name} reverse={reverse ? true : false}>
+    <Wrapper id={slug} reverse={reverse ? true : false}>
       <Map cords={cords} />
       <div className="info">
         <h1>{name}</h1>
         <div className="container">
           <div className="adress">
             <p>
-              <span>Designo {slug} Office</span>
+              <span>Designo {shortcut} Office</span>
             </p>
             {adress.map((item, i) => (
               <p key={i}>{item}</p>
@@ -51,6 +55,9 @@ const Wrapper = styled.section<WrapperProps>`
     padding: 5rem 2rem;
     text-align: center;
     background-color: var(--light-pink);
+    background-image: url(${Bg});
+    background-position: left;
+    background-repeat: no-repeat;
     h1 {
       color: var(--peach);
       text-transform: capitalize;
@@ -70,6 +77,7 @@ const Wrapper = styled.section<WrapperProps>`
     width: 90vw;
     max-width: var(--max-width);
     margin: 0 auto 8rem;
+
     .info,
     .leaflet-container {
       border-radius: var(--radius);
@@ -90,8 +98,11 @@ const Wrapper = styled.section<WrapperProps>`
   @media screen and (min-width: 992px) {
     grid-template-rows: initial;
     grid-template-columns: ${props => (props.reverse ? "1fr 2fr" : "2fr 1fr")};
+    margin-bottom: 2rem;
+
     .leaflet-container {
       grid-column: ${props => (props.reverse ? "1 / 2" : "2 / 3")};
+      grid-row: 1 / 2;
     }
   }
 `

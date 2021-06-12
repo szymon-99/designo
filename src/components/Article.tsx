@@ -1,18 +1,20 @@
 import React, { FC } from "react"
-import { Button } from "../styles/Button"
+import { Anchor } from "../styles/Button"
 import { article } from "../../custom"
+import slugify from "slugify"
 
 interface ArticleProps {
   data: article
   description?: boolean
-  locations?: boolean
 }
 
-const Article: FC<ArticleProps> = ({ locations, description, data }) => {
+const Article: FC<ArticleProps> = ({ description, data }) => {
   const {
     id,
     data: { name, image },
   } = data
+  const slug = slugify(name)
+
   return (
     <article key={id}>
       <div className="img">
@@ -24,9 +26,7 @@ const Article: FC<ArticleProps> = ({ locations, description, data }) => {
         {description ? (
           <p>{data.data.desc}</p>
         ) : (
-          <Button to={locations ? "/locations" : `/${name}`}>
-            see loaction
-          </Button>
+          <Anchor to={`/locations/#${slug}`}>see Location</Anchor>
         )}
       </div>
     </article>

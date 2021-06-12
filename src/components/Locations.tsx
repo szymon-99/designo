@@ -31,7 +31,7 @@ const Locations = () => {
   return (
     <Wrapper className="section section-center">
       {articles.map(item => {
-        return <Article locations key={item.id} data={{ ...item }} />
+        return <Article key={item.id} data={{ ...item }} />
       })}
     </Wrapper>
   )
