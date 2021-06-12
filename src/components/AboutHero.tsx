@@ -3,6 +3,7 @@ import styled from "styled-components"
 import { StaticImage } from "gatsby-plugin-image"
 import Wrapper from "../styles/AboutSection"
 import bg from "../assets/images/bg/contact-hero.svg"
+import Leaf from "../assets/svgs/backgrounds/leaf.svg"
 
 const AboutHero = () => {
   return (
@@ -34,6 +35,7 @@ const HeroWrapper = styled(Wrapper)`
   background-color: var(--peach);
   color: var(--white);
   margin-top: 0;
+  position: relative;
   article {
     background-image: url(${bg});
     background-repeat: no-repeat;
