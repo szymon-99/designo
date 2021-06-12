@@ -1,6 +1,6 @@
 import React, { FC } from "react"
 import styled from "styled-components"
-import { GatsbyImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
 import { RiArrowRightSLine } from "react-icons/ri"
 import slugify from "slugify"
@@ -17,13 +17,13 @@ const Services: FC<ServicesProps> = ({ services, homePage }) => {
       {services.map(item => {
         const { id, data } = item
         const { name, huge } = data
-        const image = data.image.localFiles[0].childImageSharp.gatsbyImageData
+        const image = data.image.localFiles[0]
         const slug = slugify(name, { lower: true })
 
         return (
           <article key={id} className={homePage && huge ? "huge" : undefined}>
             <div className="bg"></div>
-            <GatsbyImage image={image} alt={name} className="img" />
+            <GatsbyImage image={getImage(image)} alt={name} className="img" />
             <div className="info">
               <h2>{name}</h2>
               <Link to={`/${slug}`}>

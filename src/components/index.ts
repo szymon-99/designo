@@ -12,6 +12,7 @@ import ProjectsHero from "./ProjectsHero"
 import Navbar from "./Navbar"
 import Footer from "./Footer"
 import ContactHero from "./ContactHero"
+import MapCell from "./MapCell"
 export {
   Layout,
   Contact,
@@ -27,4 +28,5 @@ export {
   Navbar,
   Footer,
   ContactHero,
+  MapCell,
 }
