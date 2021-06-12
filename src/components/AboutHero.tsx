@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { StaticImage } from "gatsby-plugin-image"
 import Wrapper from "../styles/AboutSection"
+import bg from "../assets/images/bg/contact-hero.svg"
 
 const AboutHero = () => {
   return (
@@ -33,6 +34,18 @@ const HeroWrapper = styled(Wrapper)`
   background-color: var(--peach);
   color: var(--white);
   margin-top: 0;
+  article {
+    background-image: url(${bg});
+    background-repeat: no-repeat;
+    background-position: top left;
+  }
+
+  @media screen and (min-width: 700px) {
+    article {
+      background-size: 80%;
+    }
+  }
+
   @media screen and (min-width: 992px) {
     grid-template-columns: 1fr 470px;
     grid-template-rows: 480px;
