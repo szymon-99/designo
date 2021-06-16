@@ -59,7 +59,7 @@ const Wrapper = styled.nav`
   }
 
   @media screen and (min-width: 700px) {
-    padding: 3rem 0;
+    padding: 4rem 0;
     display: flex;
     justify-content: space-between;
     align-items: center;

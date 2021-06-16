@@ -3,7 +3,6 @@ import styled from "styled-components"
 import { StaticImage } from "gatsby-plugin-image"
 import Wrapper from "../styles/AboutSection"
 import bg from "../assets/images/bg/contact-hero.svg"
-import Leaf from "../assets/svgs/backgrounds/leaf.svg"
 
 const AboutHero = () => {
   return (

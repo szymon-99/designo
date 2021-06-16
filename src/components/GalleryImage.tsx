@@ -9,9 +9,10 @@ interface GalleryImageProps {
 }
 
 const GalleryImage: FC<GalleryImageProps> = ({ name, desc, image }) => {
+  const imageData = getImage(image)
   return (
     <Wrapper>
-      <GatsbyImage image={getImage(image)} alt={name} />
+      {imageData && <GatsbyImage image={imageData} alt={name} />}
       <div className="info">
         <h3>{name}</h3>
         <p>{desc}</p>
