@@ -2,7 +2,7 @@ import React from "react"
 import GlobalStyle from "./src/styles/GlobalStyle"
 // import { Layout } from "./src/components"
 
-export const rootWrapper = ({ element }) => {
+export const pageWrapper = ({ element }) => {
   return (
     <>
       <GlobalStyle />
