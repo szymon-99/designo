@@ -1,7 +1,6 @@
 import React, { FC } from "react"
 import styled from "styled-components"
 import { project } from "../../custom"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import GalleryImage from "./GalleryImage"
 
 interface GalleryProps {
