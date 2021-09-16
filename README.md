@@ -4,7 +4,7 @@
 
 [LIVE DEMO HERE](https://designo-ess.netlify.app/)
 
-This site is with [gatsby](https://www.gatsbyjs.com/) and [airtable](https://www.airtable.com/) to manage data.
+This site was built with [gatsby](https://www.gatsbyjs.com/) and [airtable](https://www.airtable.com/) to manage data.
 
 Desing comes from [frontendmentor](https://www.frontendmentor.io/) but all of the code and functionallity was created by me. 
 
