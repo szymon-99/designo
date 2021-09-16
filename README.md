@@ -1,16 +1,20 @@
-# This is my first website project created.
+# Static landing page built with Gatbsy
 
-This site is completely static built with [gatsby](https://www.gatsbyjs.com/) and [airtable](https://www.airtable.com/) which is a headless cms that i used to manage data.
+### This is my first website ever created.
 
-### Technologies that i used in the project
+[LIVE DEMO HERE](https://designo-ess.netlify.app/)
+
+This site is with [gatsby](https://www.gatsbyjs.com/) and [airtable](https://www.airtable.com/) to manage data.
+
+Desing comes from [frontendmentor](https://www.frontendmentor.io/) but all of the code and functionallity was created by me. 
+
+Technologies that i used in this project:
 - styled components
 - formik
 - yup
 - leaflet
 - typescript
 - gatsbyjs
-
-[You can see live demo here](https://designo-ess.netlify.app/)
 
 This is project is not finished yet and i will definately need to work on the code since this was my first work.
 
