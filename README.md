@@ -16,5 +16,5 @@ Technologies that i used in this project:
 - typescript
 - gatsbyjs
 
-This is project is not finished yet and i will definately need to work on the code since this was my first work.
+This project is not finished yet and i will definately need to work on the code since this was my first work.
 
