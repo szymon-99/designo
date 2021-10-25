@@ -2,7 +2,7 @@
 
 ### This is my first website ever created.
 
-[LIVE DEMO HERE](https://designo-ess.netlify.app/)
+[LIVE DEMO HERE](https://designo-demo.netlify.app/)
 
 This site was built with [gatsby](https://www.gatsbyjs.com/) and [airtable](https://www.airtable.com/) to manage data.
 
